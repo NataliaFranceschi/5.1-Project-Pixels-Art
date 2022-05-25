@@ -22,3 +22,15 @@ function createBoard (linha){
 }
 
 createBoard(linha);
+
+function trocaClasse (event){
+    const elementoSelected = document.querySelector('.selected');
+    elementoSelected.classList.remove('selected');
+    event.target.classList.add('selected');
+}
+
+document.getElementById("primeiraCor").addEventListener('click', trocaClasse);
+document.getElementById("segundaCor").addEventListener('click', trocaClasse);
+document.getElementById("terceiraCor").addEventListener('click', trocaClasse);
+document.getElementById("quartaCor").addEventListener('click', trocaClasse);
+
