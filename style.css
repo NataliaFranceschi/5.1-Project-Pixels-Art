@@ -1,0 +1,11 @@
+.color {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+#primeiraCor {background-color: black;}
+#segundaCor {background-color: red;}
+#terceiraCor {background-color: blue;}
+#quartaCor {background-color: green;}
