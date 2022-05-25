@@ -1,6 +1,6 @@
 .color {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     display: inline-block;
     border: 1px solid black;
 }
@@ -9,3 +9,15 @@
 #segundaCor {background-color: red;}
 #terceiraCor {background-color: blue;}
 #quartaCor {background-color: green;}
+
+.pixel {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.line {
+    height: 40px;
+}
