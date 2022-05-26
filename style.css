@@ -5,19 +5,18 @@
     border: 1px solid black;
 }
 
-#primeiraCor {background-color: black;}
-#segundaCor {background-color: red;}
-#terceiraCor {background-color: blue;}
-#quartaCor {background-color: green;}
-
 .pixel {
     height: 40px;
     width: 40px;
     display: inline-block;
     border: 1px solid black;
-    background-color: white;
 }
 
 .line {
     height: 40px;
+}
+
+#criacaoquadro{
+    display: inline-block;
+    margin-bottom: 10px;
 }
