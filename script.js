@@ -10,14 +10,22 @@ document.getElementById('segundaCor').style.background = corAleatoria();
 document.getElementById('terceiraCor').style.background = corAleatoria();
 document.getElementById('quartaCor').style.background = corAleatoria();
 
-const divBoard = document.getElementById('pixel-board');
+function mudancaCor(event) {
+  const selected = document.getElementsByClassName('selected')[0];
+  event.target.style.backgroundColor = selected.style.backgroundColor;
+  console.log(event.target);
+}
 
-function createBoard(tamanho) {
+const divBoard = document.getElementById('pixel-board');
+function createLine(tamanho) {
   for (let i = 0; i < tamanho; i += 1) {
     const divline = document.createElement('div');
     divline.className = 'line';
     divBoard.appendChild(divline);
   }
+}
+
+function createPixel() {
   const linha = document.getElementsByClassName('line');
   for (let i = 0; i < linha.length; i += 1) {
     for (let index = 0; index < linha.length; index += 1) {
@@ -25,9 +33,15 @@ function createBoard(tamanho) {
       pixel.className = 'pixel';
       pixel.style.border = '1px solid black';
       pixel.style.backgroundColor = 'white';
+      pixel.addEventListener('click', mudancaCor);
       linha[i].appendChild(pixel);
     }
   }
+}
+
+function createBoard(tamanho) {
+  createLine(tamanho);
+  createPixel();
 }
 
 createBoard(5);
@@ -42,17 +56,6 @@ document.getElementById('primeiraCor').addEventListener('click', trocaClasse);
 document.getElementById('segundaCor').addEventListener('click', trocaClasse);
 document.getElementById('terceiraCor').addEventListener('click', trocaClasse);
 document.getElementById('quartaCor').addEventListener('click', trocaClasse);
-
-const pixel = document.getElementsByClassName('pixel');
-
-function mudancaCor(event) {
-  const selected = document.getElementsByClassName('selected')[0];
-  event.target.style.backgroundColor = selected.style.backgroundColor;
-}
-
-for (let index = 0; index < pixel.length; index += 1) {
-  pixel[index].addEventListener('click', mudancaCor);
-}
 
 function limpar() {
   const pixels = document.getElementsByClassName('pixel');
@@ -69,7 +72,7 @@ const input = document.getElementsByTagName('input')[0];
 
 function apagarBoard() {
   const line = document.getElementsByClassName('line');
-  for (let i = 0; i < 5; i += 1) {
+  while (line[0] !== undefined) {
     line[0].remove();
   }
 }
