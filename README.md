@@ -13,6 +13,6 @@ Projeto desenvolvido no curso da Trybe ao final do bloco 5* do Módulo 1 - Funda
  5.5.4 - (Bônus) Projeto - Adivinhe a Cor<br>
  5.5.5 - (Bônus) Projeto - Carta Misteriosa<br><br>
 
-No projeto <strong>Arte com pixel</strong> foi desenvolvido um quadro o qual cada unidade pode ser colorida com a cor selecionada na paleta de cores. O quadro inicial tem tamanho 5x5,tamanho mínimo, e pode ser alterado, sendo o tamanho máximo de 50x50.
+No projeto <strong>Arte com pixels</strong> foi desenvolvido um quadro o qual cada unidade pode ser colorida com a cor selecionada na paleta de cores. O quadro inicial tem tamanho 5x5,tamanho mínimo, e pode ser alterado, sendo o tamanho máximo de 50x50.
 
 ![pixelsArt](./pixelsArt.gif)
